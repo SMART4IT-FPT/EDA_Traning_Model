@@ -18,7 +18,6 @@ This project performs **exploratory data analysis (EDA)** on a dataset of resume
   - `label`: Job-related labels (e.g., `Python_Developer;Web_Developer`), total of **552 unique values**.
 - **Grouped Occupations**: Labels are mapped into **10 main job categories** (e.g., `Software_Developer`, `Database_Administrator`).
 - **Missing labels**: ~2.51% of resumes have no label.
-- **New field**: `job_group` was created to simplify label grouping.
 
 ---
 ## Exploratory Data Analysis (EDA)
@@ -39,7 +38,6 @@ Based on the token distribution, it can be observed that this dataset consists o
 ## Conclusion
 
 The exploratory data analysis (EDA) of the resume dataset has provided valuable insights into its structure, quality, and label distribution:
-- A new field, **`job_group`**, was introduced to simplify downstream tasks by **grouping labels into 10 broader job categories**.
 - A **significant class imbalance** was identified, especially the **overrepresentation of the "Software Developer"** category. This issue should be addressed during model training 
 - **Token distribution analysis** shows that resumes are typically **long-form documents**, often with high token counts. This has implications for model selection, favoring architectures that support **long context windows**, such as **Longformer** or **BigBird**.
 
